@@ -1,0 +1,106 @@
+
+#titulo {
+	height: 20%;
+	width: 100%;
+	font-size: 400%;
+}
+
+.subtitulos {
+	color: #000;
+	font-family: Julius Sans One;
+	font-size: 300%;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+}
+
+#centro {
+	display: flex;
+	max-width: 100%;
+	height: 80vh;
+	width: 100vw;
+       	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Create a 3-column grid */
+}
+.portada  {
+	width: 100%;
+	height: 80%;
+	flex: 60%;
+}
+
+
+
+.campo {
+	width: 80%;
+	height: 10%;
+	margin: 1%;
+	border: none;
+	font-size: 250%;
+
+	border: none;  
+	border-bottom: 1px solid #000;
+}
+
+
+.campo:focus {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #000;
+}
+
+
+#font-size {
+	width: 200px;
+	height: 150px;
+}
+
+
+#formulario {
+	width: 100%;
+	flex:40%;
+}
+
+
+#copyright {
+	height: 10%;
+	font-size: 150%;
+}
+
+#slogan {
+	height: 10%;
+	margin: 30px;
+}
+
+
+#enviar {
+	flex-shrink: 0;
+	margin: 30px;
+	border-radius: 55px;
+	background: #FFD444;
+	font-size: 300%;
+	width: 30%;
+	height: 10%;
+	text-align: center;
+}
+
+#crear-cuenta {
+	border-radius: 55px;
+	background: #75A6FF;
+	width: 45%;
+	height: 10%;
+	flex-shrink: 0;
+	font-size: 200%;
+}
+
+.botones {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+
+#o {
+	font-size: 30px;
+}
