@@ -1,0 +1,53 @@
+.progress-img {
+  width: 20%;
+  height: 20%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 680px;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+.info{
+  margin-top: 50px;
+}
+
+.crear-cuentaimg{
+
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+.input-form{
+
+  border-color: transparent;
+  border-bottom-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 0px;
+  width: 80%;
+  margin-top: 20px;
+
+}
+
+.label{
+  padding-top: 10px;
+  margin-top: 20px;
+
+}
+
+.form{
+  margin-top: 100px;
+}
+
+.h5{
+
+  margin-top: 15px;
+
+}
