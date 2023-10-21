@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { GetDiasService} from './get-dias.service';
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class CalendarioComponent {
 
-	public  Mes: string = 'May';
-	public  anio: string = '2023';
 
 
+	constructor( public get_dias: GetDiasService){}
 
+	desplazar(direccion: number){
+		let gd = this.get_dias;
+		gd.anio += Math.floor( (gd.mes + direccion )/12 );
+		gd.mes = ( gd.mes + direccion + 12 ) % 12;
+		gd.nombreMes = gd.arrayDiasMes[gd.mes].nombre;
+		gd.construirDiasCal(gd.anio, gd.mes);
+	}
 }
