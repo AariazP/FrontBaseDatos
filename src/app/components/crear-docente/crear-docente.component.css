@@ -1,0 +1,42 @@
+.crear-cuentaimg{
+  margin: 40px 0 0 650px;
+  width: 400px;
+}
+
+
+.img-left{
+  margin: 130px 0 0 0;
+  width: 700px;
+  height: 750px;
+}
+
+.titulo{
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.label{
+  margin-top: 7px;
+  font-size: 22px;
+}
+
+.textfield{
+
+  border-color: transparent;
+  border-bottom-color: black;
+  font-size: 22px;
+}
+
+.btn-continuar{
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-color: #d0d0d0;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: #888888 0.2em 0.2em 0.4em;
+  margin-left: 350px;
+  margin-top: 150px;
+}
