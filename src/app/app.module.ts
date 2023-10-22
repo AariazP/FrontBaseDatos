@@ -8,6 +8,7 @@ import { BannerMateriaComponent } from './components/banner-materia/banner-mater
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { CrearCuentaComponent } from './components/crear-cuenta/crear-cuenta.component';
 import { CrearEstudianteComponent } from './components/crear-estudiante/crear-estudiante.component';
+import { CrearDocenteComponent } from './components/crear-docente/crear-docente.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CrearEstudianteComponent } from './components/crear-estudiante/crear-es
     BannerMateriaComponent,
     CalendarioComponent,
     CrearCuentaComponent,
-    CrearEstudianteComponent
+    CrearEstudianteComponent,
+    CrearDocenteComponent
   ],
   imports: [
     BrowserModule,
