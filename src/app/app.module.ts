@@ -14,6 +14,7 @@ import { ExamenPendienteComponent } from './components/examen-pendiente/examen-p
 import { ExamenActivoItemComponent } from './components/examen-activo-item/examen-activo-item.component';
 import { NotasAnterioresComponent } from './components/notas-anteriores/notas-anteriores.component';
 import { NotaAnteriorItemComponent } from './components/nota-anterior-item/nota-anterior-item.component';
+import { VerProfesorComponent } from './components/ver-profesor/ver-profesor.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NotaAnteriorItemComponent } from './components/nota-anterior-item/nota-
     ExamenPendienteComponent,
     ExamenActivoItemComponent,
     NotasAnterioresComponent,
-    NotaAnteriorItemComponent
+    NotaAnteriorItemComponent,
+    VerProfesorComponent
   ],
   imports: [
     BrowserModule,
