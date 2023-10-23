@@ -12,6 +12,8 @@ import { CrearDocenteComponent } from './components/crear-docente/crear-docente.
 import { VistaAlumnoComponent } from './components/vista-alumno/vista-alumno.component';
 import { ExamenPendienteComponent } from './components/examen-pendiente/examen-pendiente.component';
 import { ExamenActivoItemComponent } from './components/examen-activo-item/examen-activo-item.component';
+import { NotasAnterioresComponent } from './components/notas-anteriores/notas-anteriores.component';
+import { NotaAnteriorItemComponent } from './components/nota-anterior-item/nota-anterior-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ExamenActivoItemComponent } from './components/examen-activo-item/exame
     CrearDocenteComponent,
     VistaAlumnoComponent,
     ExamenPendienteComponent,
-    ExamenActivoItemComponent
+    ExamenActivoItemComponent,
+    NotasAnterioresComponent,
+    NotaAnteriorItemComponent
   ],
   imports: [
     BrowserModule,
