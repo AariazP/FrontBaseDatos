@@ -9,6 +9,9 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
 import { CrearCuentaComponent } from './components/crear-cuenta/crear-cuenta.component';
 import { CrearEstudianteComponent } from './components/crear-estudiante/crear-estudiante.component';
 import { CrearDocenteComponent } from './components/crear-docente/crear-docente.component';
+import { VistaAlumnoComponent } from './components/vista-alumno/vista-alumno.component';
+import { ExamenPendienteComponent } from './components/examen-pendiente/examen-pendiente.component';
+import { ExamenActivoItemComponent } from './components/examen-activo-item/examen-activo-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CrearDocenteComponent } from './components/crear-docente/crear-docente.
     CalendarioComponent,
     CrearCuentaComponent,
     CrearEstudianteComponent,
-    CrearDocenteComponent
+    CrearDocenteComponent,
+    VistaAlumnoComponent,
+    ExamenPendienteComponent,
+    ExamenActivoItemComponent
   ],
   imports: [
     BrowserModule,
