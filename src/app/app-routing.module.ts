@@ -5,6 +5,7 @@ import {CrearCuentaComponent} from "./components/crear-cuenta/crear-cuenta.compo
 import {CrearEstudianteComponent} from "./components/crear-estudiante/crear-estudiante.component";
 import {CrearDocenteComponent} from "./components/crear-docente/crear-docente.component";
 import {VistaAlumnoComponent} from "./components/vista-alumno/vista-alumno.component";
+import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:"vista-estudiante",
     component: VistaAlumnoComponent
+  },
+  {
+    path:"vista-profesor",
+    component: VistaProfesorComponent
   }
 ];
 

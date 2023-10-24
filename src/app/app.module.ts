@@ -16,6 +16,9 @@ import { NotasAnterioresComponent } from './components/notas-anteriores/notas-an
 import { NotaAnteriorItemComponent } from './components/nota-anterior-item/nota-anterior-item.component';
 import { VerProfesorComponent } from './components/ver-profesor/ver-profesor.component';
 import { DescripcionCursoComponent } from './components/descripcion-curso/descripcion-curso.component';
+import {VerAlumnosComponent} from "./components/ver-alumnos/ver-alumnos.component";
+import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor.component";
+import { AlumnoItemComponent } from './components/alumno-item/alumno-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { DescripcionCursoComponent } from './components/descripcion-curso/descri
     NotasAnterioresComponent,
     NotaAnteriorItemComponent,
     VerProfesorComponent,
-    DescripcionCursoComponent
+    DescripcionCursoComponent,
+    VerAlumnosComponent,
+    VistaProfesorComponent,
+    AlumnoItemComponent
   ],
   imports: [
     BrowserModule,
