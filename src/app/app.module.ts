@@ -9,6 +9,17 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
 import { CrearCuentaComponent } from './components/crear-cuenta/crear-cuenta.component';
 import { CrearEstudianteComponent } from './components/crear-estudiante/crear-estudiante.component';
 import { CrearDocenteComponent } from './components/crear-docente/crear-docente.component';
+import { VistaAlumnoComponent } from './components/vista-alumno/vista-alumno.component';
+import { ExamenPendienteComponent } from './components/examen-pendiente/examen-pendiente.component';
+import { ExamenActivoItemComponent } from './components/examen-activo-item/examen-activo-item.component';
+import { NotasAnterioresComponent } from './components/notas-anteriores/notas-anteriores.component';
+import { NotaAnteriorItemComponent } from './components/nota-anterior-item/nota-anterior-item.component';
+import { VerProfesorComponent } from './components/ver-profesor/ver-profesor.component';
+import { DescripcionCursoComponent } from './components/descripcion-curso/descripcion-curso.component';
+import {VerAlumnosComponent} from "./components/ver-alumnos/ver-alumnos.component";
+import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor.component";
+import { AlumnoItemComponent } from './components/alumno-item/alumno-item.component';
+import { CrearExamenComponent } from './components/crear-examen/crear-examen.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +29,18 @@ import { CrearDocenteComponent } from './components/crear-docente/crear-docente.
     CalendarioComponent,
     CrearCuentaComponent,
     CrearEstudianteComponent,
-    CrearDocenteComponent
+    CrearDocenteComponent,
+    VistaAlumnoComponent,
+    ExamenPendienteComponent,
+    ExamenActivoItemComponent,
+    NotasAnterioresComponent,
+    NotaAnteriorItemComponent,
+    VerProfesorComponent,
+    DescripcionCursoComponent,
+    VerAlumnosComponent,
+    VistaProfesorComponent,
+    AlumnoItemComponent,
+    CrearExamenComponent
   ],
   imports: [
     BrowserModule,
