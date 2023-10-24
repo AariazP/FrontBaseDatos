@@ -1,0 +1,33 @@
+.img{
+
+  height: 100%;
+  width: 400px;
+  margin-left: 680px;
+  margin-top: 40px;
+}
+
+
+.titulo-examen{
+
+
+  width: 300px;
+  margin: 0 0 0 750px;
+  border-color: transparent;
+  border-bottom-color: black;
+
+}
+
+.titulo-examen ::placeholder{
+
+
+  color: black;
+  font-size: 30px;
+
+}
+
+.titulo-lbl{
+
+  margin-top: 40px;
+
+
+}

@@ -19,6 +19,7 @@ import { DescripcionCursoComponent } from './components/descripcion-curso/descri
 import {VerAlumnosComponent} from "./components/ver-alumnos/ver-alumnos.component";
 import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor.component";
 import { AlumnoItemComponent } from './components/alumno-item/alumno-item.component';
+import { CrearExamenComponent } from './components/crear-examen/crear-examen.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AlumnoItemComponent } from './components/alumno-item/alumno-item.compon
     DescripcionCursoComponent,
     VerAlumnosComponent,
     VistaProfesorComponent,
-    AlumnoItemComponent
+    AlumnoItemComponent,
+    CrearExamenComponent
   ],
   imports: [
     BrowserModule,
