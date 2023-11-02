@@ -20,6 +20,7 @@ import {VerAlumnosComponent} from "./components/ver-alumnos/ver-alumnos.componen
 import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor.component";
 import { AlumnoItemComponent } from './components/alumno-item/alumno-item.component';
 import { CrearExamenComponent } from './components/crear-examen/crear-examen.component';
+import { VistaUsuarioLogueadoComponent } from './components/vista-usuario-logueado/vista-usuario-logueado.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CrearExamenComponent } from './components/crear-examen/crear-examen.com
     VerAlumnosComponent,
     VistaProfesorComponent,
     AlumnoItemComponent,
-    CrearExamenComponent
+    CrearExamenComponent,
+    VistaUsuarioLogueadoComponent
   ],
   imports: [
     BrowserModule,
