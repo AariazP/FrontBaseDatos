@@ -21,6 +21,9 @@ import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor
 import { AlumnoItemComponent } from './components/alumno-item/alumno-item.component';
 import { CrearExamenComponent } from './components/crear-examen/crear-examen.component';
 import { VistaUsuarioLogueadoComponent } from './components/vista-usuario-logueado/vista-usuario-logueado.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { VistaUsuarioLogueadoComponent } from './components/vista-usuario-loguea
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

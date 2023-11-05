@@ -15,12 +15,12 @@
 				<p id="copyright" class="subtitulos" >© Copyrigth. All rights is reseverd</p>
 				</div>
 
-				<form id="formulario">
+				<form #myForm="ngForm" (ngSubmit)="onSubmit()">
 					<p class="subtitulos">INICIAR SESION</p>
 					<label class="subtitulos" name="correo" for="campo_correo"> CORREO</label ><br>
-					<input class="campo" id="campo_correo" type="email"><br>
+					<input name="correo" [(ngModel)]="formData.correo" class="campo" id="campo_correo" type="email" value="juan123@gmail.com"><br>
 					<label class="subtitulos" name="contrasenia" for="campo_contrasenia"> CONTRASEÑA </label ><br>
-					<input id="campo_contrasenia" class="campo" type="password"><br>
+					<input name="contrasenia" [(ngModel)]="formData.contrasenia" id="campo_contrasenia" class="campo" type="password" value="contrasenia123"><br>
 					<div class="botones">
 						<input id="enviar" type="submit" value="ENTRAR">
 						<p id="o" class="subtitulos">O</p>

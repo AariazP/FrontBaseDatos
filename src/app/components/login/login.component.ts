@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import { PeticionesHTTP } from '../peticiones-http.service';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +10,22 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  private route: Router;
+  
 
-  constructor(route:Router) {
-    this.route = route;
+
+  formData = {
+	  correo: "",
+	  contrasenia: "" 
+  }
+  constructor(private route: Router, private httpServicio: PeticionesHTTP) {
   }
 
   ngOnInit(): void {
+	  this.formData = {correo: "correo3232@gmail.com", contrasenia:"323"};
   }
 
 
-  public iniciarSesion(): void {
+public iniciarSesion(): void {
     this.route.navigate(["/iniciar-sesion"]);
   }
 
@@ -26,4 +33,11 @@ export class LoginComponent implements OnInit {
     this.route.navigate(["/crear-cuenta"]);
   }
 
+  onSubmit() {
+    console.log("datos formulario");
+    this.httpServicio.enviarFormulario(this.formData).subscribe( (data) =>{
+      if ( data != null )
+    } );
+  console.log(this.formData);
+  }
 }
