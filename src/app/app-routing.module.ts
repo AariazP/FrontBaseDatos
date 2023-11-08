@@ -6,8 +6,17 @@ import {CrearEstudianteComponent} from "./components/crear-estudiante/crear-estu
 import {CrearDocenteComponent} from "./components/crear-docente/crear-docente.component";
 import {VistaAlumnoComponent} from "./components/vista-alumno/vista-alumno.component";
 import {VistaProfesorComponent} from "./components/vista-profesor/vista-profesor.component";
+import { HomeReportesComponent } from './components/home-reportes/home-reportes.component';
 
 const routes: Routes = [
+  {
+    path:"",
+    component: LoginComponent
+  },
+  {
+    path:"home",
+    component: HomeReportesComponent 
+  },
   {
     path:"login",
     component: LoginComponent

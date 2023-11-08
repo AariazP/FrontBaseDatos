@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<title>Nueva escuela</title>
 	</head>
 	<body>
@@ -17,7 +18,15 @@
 
 				<form #myForm="ngForm" (ngSubmit)="onSubmit()">
 					<p class="subtitulos">INICIAR SESION</p>
+					<label class="subtitulos" name="label_rol" for="campo_rol">ROL</label ><br>
+					<select [(ngModel)]="formData.rol" class="form-control" id="campo_rol" name="rol">
+						<option hidden selected>Seleccione un rol</option>
+						<option>Estudiante</option>
+						<option>Docente</option>
+						<option>Administrador</option>
+					</select><br>
 					<label class="subtitulos" name="correo" for="campo_correo"> CORREO</label ><br>
+					
 					<input name="correo" [(ngModel)]="formData.correo" class="campo" id="campo_correo" type="email" value="juan123@gmail.com"><br>
 					<label class="subtitulos" name="contrasenia" for="campo_contrasenia"> CONTRASEÑA </label ><br>
 					<input name="contrasenia" [(ngModel)]="formData.contrasenia" id="campo_contrasenia" class="campo" type="password" value="contrasenia123"><br>

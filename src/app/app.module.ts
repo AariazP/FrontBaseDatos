@@ -23,6 +23,7 @@ import { CrearExamenComponent } from './components/crear-examen/crear-examen.com
 import { VistaUsuarioLogueadoComponent } from './components/vista-usuario-logueado/vista-usuario-logueado.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeReportesComponent } from './components/home-reportes/home-reportes.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     VistaProfesorComponent,
     AlumnoItemComponent,
     CrearExamenComponent,
-    VistaUsuarioLogueadoComponent
+    VistaUsuarioLogueadoComponent,
+    HomeReportesComponent
   ],
   imports: [
     BrowserModule,

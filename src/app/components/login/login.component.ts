@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 import { PeticionesHTTP } from '../peticiones-http.service';
 
 @Component({
@@ -10,22 +10,24 @@ import { PeticionesHTTP } from '../peticiones-http.service';
 })
 export class LoginComponent implements OnInit {
 
-  
+
 
 
   formData = {
-	  correo: "",
-	  contrasenia: "" 
+    rol: "Seleccionar un rol",
+    correo: "juanperez@gmail.com",
+    contrasenia: "contrasenia123"
   }
+
   constructor(private route: Router, private httpServicio: PeticionesHTTP) {
   }
 
   ngOnInit(): void {
-	  this.formData = {correo: "correo3232@gmail.com", contrasenia:"323"};
+    this.formData.rol = "Seleccione un rol";
   }
 
 
-public iniciarSesion(): void {
+  public iniciarSesion(): void {
     this.route.navigate(["/iniciar-sesion"]);
   }
 
@@ -34,10 +36,12 @@ public iniciarSesion(): void {
   }
 
   onSubmit() {
-    console.log("datos formulario");
-    this.httpServicio.enviarFormulario(this.formData).subscribe( (data) =>{
-      if ( data != null )
-    } );
-  console.log(this.formData);
+    this.httpServicio.enviarFormulario(this.formData).subscribe((data) => {
+      if (data) {
+        console.log(data);
+        this.route.navigate(["/home"], {queryParams: {nombre: data.nombre}});
+      }
+    });
+    console.log(this.formData);
   }
 }

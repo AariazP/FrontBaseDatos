@@ -2,18 +2,26 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+type Rutas = {
+	[key: string]: string;
+};
+
 @Injectable({
   providedIn: 'root',
 })
 export class PeticionesHTTP {
 
-  private apiUrl = 'http://localhost:9009/estudiantes/listarEstudiantes';
-
+  private baseApiUrl = 'http://localhost:9009';
+  private rutas: Rutas = {"Estudiante": "/estudiantes/listarEstudiantes",
+			  "Docente": "/docentes/listarDocentes",
+			  "Administrador": "adminsitradores/listarAdministradores"};
   constructor(private http: HttpClient) {}
 
   enviarFormulario(body: any): Observable<any> {
+    const rol: string = body.rol;
+    const endpoint = this.rutas[rol];
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(`${this.apiUrl}`, body, {headers: headers});
+    return this.http.post(`${this.baseApiUrl}${endpoint}`, body, {headers: headers});
   }
 }
 
