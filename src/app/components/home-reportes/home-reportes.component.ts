@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CompartirInformacionService } from '../compartir-informacion.service';
 
 @Component({
   selector: 'app-home-reportes',
@@ -8,18 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeReportesComponent {
 
-  @Input()
-  nombre: string;
   
-constructor(private route: ActivatedRoute) {
-  this.nombre = this.route.snapshot.params['nombre'];
+  info: any;
+  
+constructor(private route: ActivatedRoute, private compartirInfo: CompartirInformacionService) {
+  this.info = compartirInfo.getInfo();
 }
 
 ngOnInit(){
-  console.log( this.nombre );
+  console.log( this.info );
 }
-
-
-
 
 }

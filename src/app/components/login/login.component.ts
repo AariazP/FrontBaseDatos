@@ -2,6 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { PeticionesHTTP } from '../peticiones-http.service';
+import { CompartirInformacionService } from '../compartir-informacion.service';
+
+type Rutas = {
+	[key: string]: string;
+};
 
 @Component({
   selector: 'app-login',
@@ -19,7 +24,11 @@ export class LoginComponent implements OnInit {
     contrasenia: "contrasenia123"
   }
 
-  constructor(private route: Router, private httpServicio: PeticionesHTTP) {
+  private rutas: Rutas = {"Estudiante": "/estudiantes/listarEstudiantes",
+			  "Docente": "/docentes/listarDocentes",
+			  "Administrador": "/adminsitradores/listarAdministradores"};
+
+  constructor(private route: Router, private httpServicio: PeticionesHTTP, private compartirInfo: CompartirInformacionService) {
   }
 
   ngOnInit(): void {
@@ -36,10 +45,13 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.httpServicio.enviarFormulario(this.formData).subscribe((data) => {
+    const rol: string = this.formData.rol;
+    const endpoint = this.rutas[rol];
+    this.httpServicio.enviarFormulario(endpoint, this.formData).subscribe((data) => {
       if (data) {
         console.log(data);
-        this.route.navigate(["/home"], {queryParams: {nombre: data.nombre}});
+        this.compartirInfo.setInfo({nombre: data.nombre, correo: data.correo, rol: this.formData.rol});
+        this.route.navigate(["/home"]);
       }
     });
     console.log(this.formData);

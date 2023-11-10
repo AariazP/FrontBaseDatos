@@ -19,7 +19,7 @@
     <div class="col-6">
 
 
-      <form class="form">
+      <form class="form" #myForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
 
 
@@ -27,7 +27,7 @@
             <label class="label">Nombre</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-control input-form"  placeholder="Escriba su nombre aquí...">
+            <input [(ngModel)]="formData.nombre" type="text"  name="nombre" class="form-control input-form"  placeholder="Escriba su nombre aquí...">
           </div>
 
 
@@ -39,7 +39,7 @@
             <label class="label">Apellido</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-control input-form"  placeholder="Escriba su apellido aquí...">
+            <input [(ngModel)]="formData.apellido" name="apellido" type="text" class="form-control input-form"  placeholder="Escriba su apellido aquí...">
           </div>
 
 
@@ -52,7 +52,7 @@
             <label class="label">Correo</label>
           </div>
           <div class="col-9">
-            <input type="text" class="form-control input-form"  placeholder="Escriba su correo aquí...">
+            <input [(ngModel)]="formData.correo" name="correo" type="text" class="form-control input-form"  placeholder="Escriba su correo aquí...">
           </div>
 
 
@@ -64,9 +64,8 @@
             <label class="label">Contraseña</label>
           </div>
           <div class="col-9">
-            <input type="password" class="form-control input-form"  placeholder="Escriba su contraseña aquí...">
+            <input [(ngModel)]="formData.contrasenia" name="contrasenia" type="password" class="form-control input-form"  placeholder="Escriba su contraseña aquí...">
           </div>
-
 
         </div>
         <div class="div-radios row">
@@ -75,24 +74,26 @@
 
           <div class="row align-items-center justify-content-center" >
             <div class="col-auto align-items-center justify-content-center">
-              <input class="radio" type="radio" name="radio">
+              <input [(ngModel)]="formData.esEstudiante" name="esEstudiante" class="radio" type="radio"  value="Si">
               <label class="label">Si</label>
             </div>
             <div class="col-auto align-items-center justify-content-center">
-              <input class="radio" type="radio">
+              <input [(ngModel)]="formData.esEstudiante" class="radio" type="radio" name="esEstudiante" value="No">
               <label class="label">No</label>
+              
             </div>
           </div>
 
         </div>
+
+          <div class="div-button align-items-center">
+            <input class="btn btn-primary btn-continuar" id="enviar"  type="submit" value="Continuar">    
+  </div>
       </form>
 
     </div>
   </div>
 
-  <div class="div-button align-items-center">
-    <button class="btn btn-primary btn-continuar">Continuar</button>
-  </div>
 
 </div>
 
